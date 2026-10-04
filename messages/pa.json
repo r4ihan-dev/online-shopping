@@ -1,5 +1,36 @@
 {
+        "navbar":{
+        "logo":"Hama کالا",
+        "btn-light":"Lighت",
+        "btn-dark":"Darک",
+        "btn-system":"Systeم",
+        "btn-login":"Logiن"
+    },
     "homePage":{
-"title":"سلامونع"
+"hero":{
+    "title":"سلام unique items tailored to your life styles",
+    "description":"Instead of msking you browsw through thousand of generic items, these services analyze yout style prefrences , geographic location, and dail routines to surface hig-quality , distinctive goods.  ",
+     "btn-explore":"محصولات وبلتی",
+    "btn-join":"کندول کول"
+},
+"features":{
+    "subtitle":"Features",
+    "title":"بشتوOur spicial Features",
+    "feature1":{
+        "title":"Security",
+        "description":" بشتوYour data in this app is completely ssecure"},
+        "feature2":{
+           "title": "User Friendly ",
+           "description":"The UI/UX of application built to feel comfortable "},
+           "feature3":{
+            "title":"Multiple Language",
+            "description":"This application is available in Dari, Pashto, English Language"
+           },
+           "feature4":{
+            "title":"Products Variaty",
+            "description":"You can find variety of products from different brands around the world "
+           }
+        
+    }
     }
 }

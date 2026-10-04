@@ -1,3 +1,5 @@
+import Features from "@/componints/HomePage/Features";
+import Hero from "@/componints/HomePage/Hero";
 import Navbar from "@/componints/shared/Navbar";
 import ThemSwitcher from "@/componints/shared/ThemSwitcher";
 import { useTranslations } from "next-intl";
@@ -8,8 +10,8 @@ function homePage() {
   return (
     <div>
       <Navbar />
-      {/* <ThemSwitcher /> */}
-      {t("title")}
+      <Hero />
+      <Features />
     </div>
   );
 }

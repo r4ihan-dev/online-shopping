@@ -1,5 +1,36 @@
 {
+    "navbar":{
+        "logo":"Hama Kala",
+        "btn-light":"Light",
+        "btn-dark":"Dark",
+        "btn-system":"System",
+        "btn-login":"Login"
+    },
     "homePage":{
-"title":"Hello wold"
+"hero":{
+    "title":"find unique items tailored to your life styles.",
+    "description":"Instead of msking you browsw through thousand of generic items, these services analyze yout style prefrences , geographic location, and dail routines to surface hig-quality , distinctive goods.  ",
+    "btn-explore":"Explore Product",
+    "btn-join":"Join"
+},
+"features":{
+    "subtitle":"Features",
+    "title":"Our spicial Features",
+    "feature1":{
+        "title":"Security",
+        "description":"Your data in this app is completely ssecure"},
+        "feature2":{
+           "title": "User Friendly ",
+           "description":"The UI/UX of application built to feel comfortable "},
+           "feature3":{
+            "title":"Multiple Language",
+            "description":"This application is available in Dari, Pashto, English Language"
+           },
+           "feature4":{
+            "title":"Products Variaty",
+            "description":"You can find variety of products from different brands around the world "
+           }
+        
     }
 }
+    }

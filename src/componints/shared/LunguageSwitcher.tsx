@@ -1,3 +1,4 @@
+"use client";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -6,23 +7,33 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import React from "react";
+import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+import React, { useTransition } from "react";
 
 function LunguageSwitcher() {
+  const router = useRouter();
+  const locale = useLocale();
+  const [panding, startTransition] = useTransition();
   function ChangeLunguage(locale: string) {
-    document.cookie = `locale=${locale};pathe/;max-age=3`;
+    document.cookie = `locale=${locale};pathe/;max-age=7776000`;
+    startTransition(() => {
+      router.refresh();
+    });
   }
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>Lunguage</DropdownMenuTrigger>
+      <DropdownMenuTrigger>
+        {locale === "pa" ? "بشتو" : locale === "fa" ? "دری" : "English"}
+      </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuGroup>
           <DropdownMenuLabel>Lunguage</DropdownMenuLabel>
           <DropdownMenuItem onClick={() => ChangeLunguage("fa")}>
-            Dari
+            دری
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => ChangeLunguage("pa")}>
-            Pashto
+            بشتو
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => ChangeLunguage("en")}>
             English
