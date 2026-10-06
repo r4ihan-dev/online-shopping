@@ -20,10 +20,14 @@ function Hero() {
         <h1 className="text-6xl font-bold text-[rgb(8,54,118)]">
           {t("hero.title")}
         </h1>
-        <p className="text-red-100 text-xs">{t("hero.description")}</p>
+        <p className=" text-xs hover:text-[rgb(8,54,118)]">
+          {t("hero.description")}
+        </p>
         <div className="flex gap-5">
-          <Button variant="destructive">{t("hero.btn-explore")}</Button>
-          <Button className="px-7 bg-red-800 hover:bg-transparent hover:border-red-800 hover:text-red-700 transition-colors duration-300">
+          <Button className="dark:text-white bg-[rgb(8,54,118)] hover:bg-[rgb(159,189,231)] hover:text-[rgb(8,54,118)] hover:border-1 hover:font-bold hover:border-[rgb(8,54,118)]">
+            {t("hero.btn-explore")}
+          </Button>
+          <Button className="px-7  dark:text-white  hover:bg-transparent bg-[rgb(8,54,118)] hover:bg-[rgb(159,189,231)] hover:text-[rgb(8,54,118)] hover:border-1 hover:font-bold hover:border-[rgb(8,54,118)] transition-colors duration-300">
             {t("hero.btn-join")}
           </Button>
         </div>

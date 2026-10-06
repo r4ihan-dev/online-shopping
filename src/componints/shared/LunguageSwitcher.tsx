@@ -25,7 +25,7 @@ function LunguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <LucideLanguages size={16} />
+        <LucideLanguages size={16} className="dark:text-[rgb(8,54,118)] " />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuGroup>

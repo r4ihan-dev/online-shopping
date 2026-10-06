@@ -42,7 +42,7 @@ function Features() {
         {listFeatures.map((feature) => (
           <Card key={feature.id}>
             <CardHeader className="flex items-center justify-center w-full">
-              <span className="inline-block items-center pt-2 px-2 w-10 h-10 rounded-full bg-red-950 text-white">
+              <span className="inline-block    bg-[rgb(17,67,138)] items-center pt-2 px-2 w-10 h-10 rounded-full text-white">
                 {feature.id === 1 ? (
                   <ShieldCheck />
                 ) : feature.id === 2 ? (

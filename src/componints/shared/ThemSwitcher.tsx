@@ -15,7 +15,7 @@ import React, { useEffect, useState } from "react";
 function ThemSwitcher({
   btn_light,
   dark,
-  btn_system,
+  btn_syste,
   themes,
 }: {
   btn_light: string;
@@ -35,11 +35,11 @@ function ThemSwitcher({
       <DropdownMenu>
         <DropdownMenuTrigger>
           {theme === "light" ? (
-            <Sun size={16} />
+            <Sun size={16} className="dark:text-[rgb(8,54,118)] " />
           ) : theme === "dark" ? (
-            <Moon size={16} />
+            <Moon size={16} className="dark:text-[rgb(8,54,118)] " />
           ) : (
-            <SunMoon size={16} />
+            <SunMoon size={16} className="dark:text-[rgb(8,54,118)] " />
           )}
         </DropdownMenuTrigger>
         <DropdownMenuContent>
@@ -59,7 +59,7 @@ function ThemSwitcher({
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => setTheme("system")}>
               <div className="flex w-full justify-between">
-                <span>{btn_system}</span>
+                <span>{btn_syste}</span>
                 <SunMoon size={16} />
               </div>
             </DropdownMenuItem>

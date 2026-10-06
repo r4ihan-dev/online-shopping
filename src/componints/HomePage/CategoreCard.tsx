@@ -25,7 +25,8 @@ function CategoreCard({
       </div>
       <Image
         src={categorie.image}
-        alt={categorie.title}
+        // alt={categorie.title}
+        alt=""
         className="object-cover h-96 g "
         height={1000}
         width={1000}

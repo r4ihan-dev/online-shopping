@@ -10,19 +10,19 @@ function Categories() {
       id: 1,
       title: t("cat1.title"),
       desc: t("cat1.description"),
-      image: "/images/images1.jpg",
+      image: "/public/images/images1.jpg",
     },
     {
       id: 2,
       title: t("cat2.title"),
       desc: t("cat2.description"),
-      image: "/images/images1.jpg",
+      image: "/public/images/images1.jpg",
     },
     {
       id: 3,
       title: t("cat3.title"),
       desc: t("cat3.description"),
-      image: "/images/images1.jpg",
+      image: "/public/images/images1.jpg",
     },
   ];
 
