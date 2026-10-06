@@ -36,7 +36,7 @@ function FeatureProdcts() {
   return (
     <div className="w-full max-w-6xl mx-auto my-9">
       <h1 className="title">Featured Prodcts</h1>
-      <div className="w-full grid grid-cols-3 gap-4 ">
+      <div className="w-full grid grid-cols-4 mt-6 gap-4 ">
         {pruoductList.map((product) => (
           <PriductCard key={product.id} product={product} />
         ))}
