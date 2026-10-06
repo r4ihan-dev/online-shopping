@@ -35,10 +35,10 @@ function Features() {
     },
   ];
   return (
-    <div className="w-full max-w-6xl mx-auto mt-20  ">
+    <div className="w-full max-w-6xl mx-auto mt-8  ">
       <h1 className="text-center font-bold text-xl">{t("subtitle")}</h1>
-      <h1 className="text-center mt-4 font-bold text-3xl">{t("title")}</h1>
-      <div className="grid w-full grid-cols-4 gap-5">
+      <h1 className="title">{t("title")}</h1>
+      <div className="grid w-full grid-cols-4 gap-5 mt-6">
         {listFeatures.map((feature) => (
           <Card key={feature.id}>
             <CardHeader className="flex items-center justify-center w-full">
@@ -55,7 +55,7 @@ function Features() {
               </span>
             </CardHeader>
             <CardContent>
-              <h1 className="font-bold text-xl text-center">{feature.title}</h1>
+              <h1 className="">{feature.title}</h1>
               <span>{feature.description}</span>
             </CardContent>
           </Card>

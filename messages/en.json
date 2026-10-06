@@ -4,7 +4,8 @@
         "btn-light":"Light",
         "btn-dark":"Dark",
         "btn-system":"System",
-        "btn-login":"Login"
+        "btn-login":"Login",
+        "theme":"Theme"
     },
     "homePage":{
 "hero":{
@@ -31,6 +32,21 @@
             "description":"You can find variety of products from different brands around the world "
            }
         
-    }
+    },
+    "categories":{
+        "title":"Product Categories",
+        "cat1":{
+            "title":"Men",
+            "description":"Fall 2026 "
+
+        },
+        "cat2":{
+            "title":"Women",
+            "description":"Fall 2026 "
+        },
+        "cat3":{
+            "title":"Accessories",
+            "description":"Femous Brand Around the world"
+        }
 }
-    }
+    }}

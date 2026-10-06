@@ -7,6 +7,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { LucideLanguages } from "lucide-react";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import React, { useTransition } from "react";
@@ -24,7 +25,7 @@ function LunguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        {locale === "pa" ? "بشتو" : locale === "fa" ? "دری" : "English"}
+        <LucideLanguages size={16} />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuGroup>

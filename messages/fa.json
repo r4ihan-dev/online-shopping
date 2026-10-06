@@ -4,7 +4,8 @@
         "btn-light":"روشن",
         "btn-dark":"تاریک",
         "btn-system":"سیستم",
-        "btn-login":"ورود کاربر"
+        "btn-login":"ورود کاربر",
+         "theme":"حالت"
     },
     "homePage":{
 "hero":{
@@ -31,6 +32,22 @@
             "description":"You can find variety of products from different brands around the world "
            }
         
-    }
+    },
+      "categories":{
+        "title":"کتگوری محصولات",
+        "cat1":{
+            "title":"آقایات",
+            "description":"خزان 2026 "
+
+        },
+        "cat2":{
+            "title":"خانم ها",
+            "description":"خزان2026 "
+        },
+        "cat3":{
+            "title":"آرایشی و بهداشتی",
+            "description":"برند های معروف"
+        }
+}
     }
 }

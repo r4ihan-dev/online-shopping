@@ -3,6 +3,7 @@ import ThemSwitcher from "./ThemSwitcher";
 import { Button } from "@/components/ui/button";
 import LunguageSwitcher from "./LunguageSwitcher";
 import { useTranslations } from "next-intl";
+import { LogIn } from "lucide-react";
 
 function Navbar() {
   const t = useTranslations("navbar");
@@ -16,10 +17,14 @@ function Navbar() {
           btn_ligt={t("btn-light")}
           dark={t("btn-dark")}
           btn_system={t("btn-system")}
+          themes={t("theme")}
         />
         <LunguageSwitcher />
 
-        <Button variant="destructive">{t("btn-login")}</Button>
+        <Button variant="destructive">
+          <LogIn size={20} />
+          {t("btn-login")}
+        </Button>
       </div>
     </nav>
   );

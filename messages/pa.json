@@ -4,7 +4,8 @@
         "btn-light":"Lighت",
         "btn-dark":"Darک",
         "btn-system":"Systeم",
-        "btn-login":"Logiن"
+        "btn-login":"Logiن",
+         "theme":"Theme"
     },
     "homePage":{
 "hero":{
@@ -31,6 +32,22 @@
             "description":"You can find variety of products from different brands around the world "
            }
         
-    }
+    },
+      "categories":{
+        "title":"Product Categories",
+        "cat1":{
+            "title":"Meن",
+            "description":"Falل 2026 "
+
+        },
+        "cat2":{
+            "title":"Womeن",
+            "description":"Fall 2026 "
+        },
+        "cat3":{
+            "title":"Accessories",
+            "description":"Femous Brand Around the world"
+        }
+}
     }
 }
