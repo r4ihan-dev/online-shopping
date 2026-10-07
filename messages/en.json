@@ -48,5 +48,18 @@
             "title":"Accessories",
             "description":"Femous Brand Around the world"
         }
+},
+"products":{
+    "title":"Featured Products",
+    "categories":{
+        "men":"Men",
+        "women":"Women",
+        "all_product":"All Product",
+        "shoes":"Shoes",
+        "watches":"watches",
+        "search":"Search",
+        "filter":"Filter"
+    }
 }
+
     }}

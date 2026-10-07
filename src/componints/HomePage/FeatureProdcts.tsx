@@ -1,8 +1,13 @@
 import React from "react";
 import PriductCard from "./PriductCard";
 import { Button } from "@/components/ui/button";
+import Search_btn from "./Search_btn";
+import { Search } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Categories from "./Categories";
 
 function FeatureProdcts() {
+  const t = useTranslations("homePage.products");
   const pruoductList: {
     id: number;
     name: string;
@@ -36,24 +41,27 @@ function FeatureProdcts() {
   ];
   return (
     <div className="w-full max-w-6xl mx-auto my-9">
-      <h1 className="title">Featured Prodcts</h1>
+      <h1 className="title">{t("title")}</h1>
       <div className="w-full flex justify-between">
         <div className="flex space-x-4">
           <Button variant="link" className="text-[rgb(8,54,118)] font-bold">
-            All Prodcuct
+            {t("categories.all_product")}
           </Button>
           <Button variant="link" className="text-[rgb(8,54,118)] font-bold">
-            Men
+            {t("categories.men")}
           </Button>
           <Button variant="link" className="text-[rgb(8,54,118)] font-bold">
-            Women
+            {t("categories.women")}
           </Button>
           <Button variant="link" className="text-[rgb(8,54,118)] font-bold">
-            Shoes
+            {t("categories.shoes")}
           </Button>
           <Button variant="link" className="text-[rgb(8,54,118)] font-bold">
-            Watches
+            {t("categories.watches")}
           </Button>
+        </div>
+        <div className="flex  gap-4">
+          <Search_btn Search={t("categories.search")} />
         </div>
       </div>
       <div className="w-full grid grid-cols-4 mt-6 gap-4 ">

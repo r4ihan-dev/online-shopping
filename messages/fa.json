@@ -36,7 +36,7 @@
       "categories":{
         "title":"کتگوری محصولات",
         "cat1":{
-            "title":"آقایات",
+            "title":"آقایان",
             "description":"خزان 2026 "
 
         },
@@ -48,6 +48,19 @@
             "title":"آرایشی و بهداشتی",
             "description":"برند های معروف"
         }
+},
+"products":{
+    "title":"محصملات ویژه",
+    "categories":{
+        "men":"مردانه",
+        "women":"زنانه",
+        "all_product":"همه محصولات",
+        "shoes":"بوتیک",
+        "watches":"ساعت",
+        "search":"جستجو",
+        "filter":"فلتر"
+    }
 }
+
     }
 }

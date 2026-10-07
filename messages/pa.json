@@ -48,6 +48,18 @@
             "title":"Accessories",
             "description":"Femous Brand Around the world"
         }
+},
+"products":{
+    "title":"غوره شوی محصولات",
+    "categories":{
+        "men":"مری",
+        "women":"شخی",
+        "all_product":"تول محصولات",
+        "shoes":"بوتان",
+        "watches":"ساعتونه",
+        "search":"لون",
+        "filter":"فلتر"
+    }
 }
     }
 }
