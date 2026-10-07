@@ -41,7 +41,7 @@ function Filter_btn({
             PRICE:High to Low
           </Button>
         </div>
-        {/*  */}
+        {/* part of Price  */}
         <div className="flex items-end flex-col grid-cols-2">
           <h1>Price</h1>
           <Button className="hover:text-[rgb(8,54,118)]" variant="link">
