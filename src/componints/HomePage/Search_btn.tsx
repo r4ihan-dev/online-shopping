@@ -12,7 +12,7 @@ function Search_btn({ Search }: { Search: string }) {
     <div className="flex items-center justify-center flex-col relative">
       <Button
         onClick={() => setShowInput(!showInout)}
-        className={`${!showInout ? <Moon /> : <SearchIcon />} px-6   rounded-none bg-[rgb(8,54,118)] relative after:absolute after:content-[''] after:h-0 after:w-0 after:border-x-[12px] after:border-x-transparent after:-translate-1/2 after:border-t-[15px] after:border-t-blue-500  after:-bottom-5 after:left-1/2   `}
+        className={`${!showInout ? <Moon /> : <SearchIcon />} px-6  hover:bg-[rgb(8,54,118)] rounded-none bg-[rgb(8,54,118)] relative after:absolute after:content-[''] after:h-0 after:w-0 after:border-x-[12px] after:border-x-transparent group group-hover:transition-all group-hover:duration-1000  after:-translate-1/2 after:border-t-[15px] hover:after:border-t-[rgb(8,54,118)]  after:-bottom-[22px] after:left-1/2   `}
       >
         {Search} <SearchIcon />
       </Button>
