@@ -1,12 +1,16 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import PriductCard from "./PriductCard";
 import { Button } from "@/components/ui/button";
 import Search_btn from "./Search_btn";
 import { Search } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Categories from "./Categories";
+import Filter_btn from "./Filter_btn";
 
 function FeatureProdcts() {
+  const [showInout, setShowInput] = useState(false);
+  const [showFilter, setShowFilter] = useState(false);
   const t = useTranslations("homePage.products");
   const pruoductList: {
     id: number;
@@ -60,8 +64,16 @@ function FeatureProdcts() {
             {t("categories.watches")}
           </Button>
         </div>
-        <div className="flex  gap-4">
-          <Search_btn Search={t("categories.search")} />
+        <div className="flex items-center gap-4">
+          <Search_btn
+            Search={t("categories.search")}
+            showInput={showInout}
+            setShowInput={setShowInput}
+          />
+          <Filter_btn
+            showFilter={setShowFilter}
+            setShowFilter={setShowFilter}
+          />
         </div>
       </div>
       <div className="w-full grid grid-cols-4 mt-6 gap-4 ">
