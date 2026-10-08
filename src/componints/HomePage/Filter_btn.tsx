@@ -6,15 +6,15 @@ import type { Dispatch, SetStateAction } from "react";
 
 function Filter_btn({
   showFilter,
-  setShowFilter,
+  setfilter,
 }: {
-  setShowFilter: Dispatch<SetStateAction<boolean>>;
+  setfilter: Dispatch<SetStateAction<boolean>>;
   showFilter: boolean;
 }) {
   return (
     <div>
       <Button
-        onClick={() => setShowFilter(!showFilter)}
+        onClick={() => setfilter(!showFilter)}
         className={` px-6  hover:bg-[rgb(8,54,118)] hover:shadow-[0_0_3px_rgb(0,0,28,0.5)] dark:text-amber-50 dark:hover:shadow-[inset_0_0_7px_rgb(225,225,225,0.5)] dark:hover:shadow-[inset_0_0_7px_rgb(225,225,225,0.5)] rounded-none bg-[rgb(8,54,118)] relative after:absolute after:content-[''] after:h-0 after:w-0 ${showFilter ? "after:border-t-[15px]" : "after:border-neutral-50"} after:border-x-[12px] after:border-x-transparent group group-hover:transition-all group-hover:duration-1000  after:-translate-1/2  after:border-t-[rgb(8,54,118)]    after:-bottom-[22px] after:left-1/2   `}
       >
         <ListFilter /> Filter

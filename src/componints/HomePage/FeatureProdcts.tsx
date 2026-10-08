@@ -70,11 +70,11 @@ function FeatureProdcts() {
             showInput={showInout}
             setShowInput={setShowInput}
           />
-          <Filter_btn showFilter={showFilter} setshowfilter={setShowFilter} />
+          <Filter_btn showFilter={showFilter} setfilter={setShowFilter} />
         </div>
-        <div>
-          <FeatureProdcts showFilter={showFilter} />
-        </div>
+      </div>
+      <div>
+        <FeatureProdcts showfilter={showFilter} />
       </div>
       <div className="w-full grid grid-cols-4 mt-6 gap-4 ">
         {pruoductList.map((product) => (
