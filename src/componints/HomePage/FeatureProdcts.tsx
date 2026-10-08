@@ -70,10 +70,10 @@ function FeatureProdcts() {
             showInput={showInout}
             setShowInput={setShowInput}
           />
-          <Filter_btn
-            showFilter={setShowFilter}
-            setShowFilter={setShowFilter}
-          />
+          <Filter_btn showFilter={showFilter} setshowfilter={setShowFilter} />
+        </div>
+        <div>
+          <FeatureProdcts showFilter={showFilter} />
         </div>
       </div>
       <div className="w-full grid grid-cols-4 mt-6 gap-4 ">

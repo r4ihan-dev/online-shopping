@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Moon, SearchIcon } from "lucide-react";
-
-import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import { SearchIcon } from "lucide-react";
+import type { Dispatch, SetStateAction } from "react";
 
 function Search_btn({
   Search,
@@ -11,7 +9,7 @@ function Search_btn({
   showInput,
 }: {
   Search: string;
-  setShowInput: () => void;
+  setShowInput: Dispatch<SetStateAction<boolean>>;
   showInput: boolean;
 }) {
   return (
