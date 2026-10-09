@@ -20,11 +20,6 @@ function Search_btn({
       >
         {Search} <SearchIcon />
       </Button>
-      <Input
-        type="text"
-        placeholder={Search}
-        className={`mt-5 ${showInput ? "block" : "hidden"} `}
-      />
     </div>
   );
 }

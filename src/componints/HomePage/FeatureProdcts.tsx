@@ -7,6 +7,7 @@ import { Search } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Categories from "./Categories";
 import Filter_btn from "./Filter_btn";
+import { Input } from "@/components/ui/input";
 
 function FeatureProdcts() {
   const [showInout, setShowInput] = useState(false);
@@ -73,8 +74,15 @@ function FeatureProdcts() {
           <Filter_btn showFilter={showFilter} setfilter={setShowFilter} />
         </div>
       </div>
-      <div>
+      {/* <div>
         <FeatureProdcts showfilter={showFilter} />
+      </div> */}
+      <div className="w-full">
+        <Input
+          type="text"
+          placeholder={t("categories.search")}
+          className={` py-3.5 mb-3.5 w-full mt-4 hover:outline-none hover:sadow-[0_0_6px_rgb(8,54,118)] ${showInout ? "block" : "hidden"} `}
+        />
       </div>
       <div className="w-full grid grid-cols-4 mt-6 gap-4 ">
         {pruoductList.map((product) => (

@@ -48,12 +48,60 @@ function FIlterPriduct({ showfilter }: { showfilter: boolean }) {
           </Button>
         </div>
       </div>
+      {/* /part of color */}
       <div className="flex flex-col gap-3">
         <div>
           <div className="w-4 h-4 bg-black rounded-full"></div>
           <span>Black</span>
         </div>
+        <div>
+          <div className="w-4 h-4 bg-blue-800 rounded-full"></div>
+          <span>Blue</span>
+        </div>
+        <div>
+          <div className="w-4 h-4 bg-gray-500 rounded-full"></div>
+          <span>Gray</span>
+        </div>
+        <div>
+          <div className="w-4 h-4 bg-green-700 rounded-full"></div>
+          <span>Green</span>
+        </div>
+        <div>
+          <div className="w-4 h-4 bg-red-800 rounded-full"></div>
+          <span>Red</span>
+        </div>
+        <div>
+          <div className="w-4 h-4 bg-white rounded-full border-2 border-gray-400"></div>
+          <span>Withe</span>
+        </div>
       </div>
+      {/* part of last */}
+      {/* <div className="w-full flex gap-4 flex-wrap h-fit">
+        <Badge
+          variant="autline"
+          className="p-2 hover:border-[rgb(8,54,118)] cursor-pointer "
+        >
+          Fashion
+        </Badge>
+        <Badge
+          variant="autline"
+          className="p-2 hover:border-[rgb(8,54,118)] cursor-pointer"
+        >
+          Lifestyle
+        </Badge>
+        <Badge
+          variant="autline"
+          className="p-2 hover:border-[rgb(8,54,118)] cursor-pointer"
+        >
+          Hzaragi
+        </Badge>
+        <Badge
+          variant="autline"
+          className="p-2 hover:border-[rgb(8,54,118)] cursor-pointer"
+        >
+          Crafts
+        </Badge>
+      </div> */}
     </div>
   );
 }
