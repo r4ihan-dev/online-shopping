@@ -60,6 +60,35 @@
         "search":"Search",
         "filter":"Filter"
     }
+},
+"filter":{
+    "brands":{
+        "title":"Brand",
+    "fashion":"Fashion",
+    "lifestyle":"Lifestyle",
+    "hazaragi":"Hazaragi",
+    "crafts":"Crafts"
+},
+"colors":{
+    "title":"Color",
+    "black":"Black",
+    "blue":"Blue",
+    "grey":"Grey",
+    "green":"Green",
+    "red":"Red",
+    "white":"Whitw"
+},
+"price":{
+"title":"Price",
+"all":"All",
+"more_than_2000":"More than 2000"
+},
+"sort_by":{
+    "title":"Sort By",
+"default":"Default",
+"popularity":"Popularity",
+"newness":"Newness",
+"price_low_to_high":"Price:Low to High",
+"price_high_to_low":"Price:High to low"
 }
-
-    }}
+     } }}

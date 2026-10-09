@@ -60,7 +60,39 @@
         "search":"جستجو",
         "filter":"فلتر"
     }
+},
+"filter":{
+    "brands":{
+        "title":"برند",
+    "fashion":"فیشن",
+    "lifestyle":"Lifestyle",
+    "hazaragi":"هزارگی",
+    "crafts":"هنر دستی"
+},
+"colors":{
+    "title":"رنگ ها",
+    "black":"سیاه",
+    "blue":"آبی",
+    "grey":"خاکستری",
+    "green":"سبز",
+    "red":"سرخ",
+    "white":"سفید"
+},
+"price":{
+"title":"قیمت",
+"all":"همه",
+"more_than_2000":"بیشتر از 2000"
+},
+"sort_by":{
+    "title":"ترتیب بر اساس",
+
+"default":"پیش فرض",
+"popularity":"شهرت",
+"newness":"جدید",
+"price_low_to_high":"ارزان به قیمت",
+"price_high_to_low":"قیمت به ارزان"
 }
+     } 
 
     }
 }

@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { useTransitionStatus } from "@base-ui/react/internals/useTransitionStatus";
+import { useTranslations } from "next-intl";
 import React from "react";
 
-function FIlterPriduct({ showfilter }: { showfilter: boolean }) {
+function FIlterPriduct({ showFilter }: { showFilter: boolean }) {
+  const t = useTranslations("homePage.filter");
   return (
     <div
-      className={` ${showfilter ? "flex-none" : "hidden"} w-full h-fit mt-2 mb-3 grid grid-cols-6 gap-8  bg-[rgb(211,210,226)] `}
+      className={` ${showFilter ? "none" : "hidden"} w-full h-fit mt-2 mb-3 grid grid-cols-6 gap-8  bg-[rgb(211,210,226)] `}
     >
       {/* sort by */}
       <div>

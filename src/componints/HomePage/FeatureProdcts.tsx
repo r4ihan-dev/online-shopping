@@ -75,7 +75,7 @@ function FeatureProdcts() {
         </div>
       </div>
       {/* <div>
-        <FeatureProdcts showfilter={showFilter} />
+        <FeatureProdcts showFilter={showFilter} />
       </div> */}
       <div className="w-full">
         <Input
