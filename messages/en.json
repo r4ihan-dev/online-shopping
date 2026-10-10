@@ -91,4 +91,22 @@
 "price_low_to_high":"Price:Low to High",
 "price_high_to_low":"Price:High to low"
 }
+     } 
+    },
+    "dashbord":{
+        "header":{
+            "title":"Online Shopping"
+        },
+        "sidebar":{
+        "title":"Dashboard",
+        "Product":{
+            "title":"Manage Products",
+            "all":"All Product",
+            "insert":"Add new Product",
+            "Manage":"Manage Product"
+        },
+        "feedback":{
+            "title":"Feedbacks",
+            "Manage":"Manage Feedbacks"
+        }
      } }}
