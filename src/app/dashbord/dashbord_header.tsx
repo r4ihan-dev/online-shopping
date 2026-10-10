@@ -1,3 +1,4 @@
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import LunguageSwitcher from "@/componints/shared/LunguageSwitcher";
 import ThemSwitcher from "@/componints/shared/ThemSwitcher";
 import { useTranslations } from "next-intl";
@@ -8,7 +9,7 @@ function DashbordHeader() {
   return (
     <div className="w-full gap-3 px-8 py-4  justify-between  items-center">
       <div className="flex gap-3 items-center">
-        <SidbarTrigger />
+        <SidebarTrigger />
         <h1>{t("dashbord.header.title")}</h1>
       </div>
       <div className="flex gap-4 items-center">
