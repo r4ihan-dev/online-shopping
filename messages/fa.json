@@ -111,5 +111,35 @@
             "title":"نظرات",
             "Manage":"میریت نظریات"
         }
-     } }
+     },
+       "insertProduct":{
+        "placeholder":{
+            "title":"اضافه کردن محصول جدید",
+            "name":"اسم محصول",
+            "price":"قیمت محصول",
+            "description":"توضیحات محصول",
+            "qty":"Quantity",
+            "alert_qty":"Alert Quantity",
+            "brand":"برند محصول",
+            "color":"رنگ محصول",
+            "size":"سایز محصول"
+        
+        },
+        "labels":{
+            "name":"اسم محصول",
+            "price":"قیمت محصول",
+            "description":"توضیحات محصول",
+            "qty":"Quantity",
+            "alert_qty":"Alert Quantity",
+            "brand":"برند محصول",
+            "color":"رنگ محصول",
+            "size":"سایز محصول",
+            "man_date":"Man Date",
+            "exp_date":"Exp.Date",
+            "back_image":"Prodeuct back image",
+            "front_image":"Prodeuct front image"
+        }
+     }
+    
+    }
 }

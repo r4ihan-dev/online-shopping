@@ -78,5 +78,35 @@
             "title":"Feedbacks",
             "Manage":"Manage Feedbacks"
         }
-     } }
+     },
+        "insertProduct":{
+        "placeholder":{
+            "title":"Create New Product",
+            "name":"Priduct name",
+            "price":"Prodeuct Price",
+            "description":"Product description",
+            "qty":"Quantity",
+            "alert_qty":"Alert Quantity",
+            "brand":"Priduct Brand",
+            "color":"Prodeuct Colors",
+            "size":"Prodeuct Size"
+        
+        },
+        "labels":{
+            "name":"Priduct name",
+            "price":"Prodeuct Price",
+            "description":"Product description",
+            "qty":"Quantity",
+            "alert_qty":"Alert Quantity",
+            "brand":"Priduct Brand",
+            "color":"Prodeuct Colors",
+            "size":"Prodeuct Size",
+            "man_date":"Man Date",
+            "exp_date":"Exp.Date",
+            "back_image":"Prodeuct back image",
+            "front_image":"Prodeuct front image"
+        }
+     }
+    
+    }
 }
