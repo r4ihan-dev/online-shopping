@@ -61,5 +61,22 @@
         "filter":"فلتر"
     }
 }
-    }
+    },
+     "dashbord":{
+        "header":{
+            "title":"Online Shopping"
+        },
+        "sidebar":{
+        "title":"Dashboard",
+        "Product":{
+            "title":"Manage Products",
+            "all":"All Product",
+            "insert":"Add new Product",
+            "Manage":"Manage Product"
+        },
+        "feedback":{
+            "title":"Feedbacks",
+            "Manage":"Manage Feedbacks"
+        }
+     } }
 }

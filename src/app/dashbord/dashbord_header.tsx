@@ -7,8 +7,8 @@ import React from "react";
 function DashbordHeader() {
   const t = useTranslations();
   return (
-    <div className="w-full gap-3 px-8 py-4  justify-between  items-center">
-      <div className="flex gap-3 items-center">
+    <div className="w-full flex-1 gap-3 px-8 py-4  bg-amber-200 justify-between  items-center">
+      <div className="flex gap-3  items-center">
         <SidebarTrigger />
         <h1>{t("dashbord.header.title")}</h1>
       </div>

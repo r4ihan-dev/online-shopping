@@ -105,11 +105,13 @@ import {
   ShoppingCart,
   ShoppingCartPlus,
 } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 import { cookies } from "next/headers";
 import Link from "next/link";
 
 async function DashboardSidebar() {
+  const t = await getTranslations("dashbord.sidebar");
   const cookiesINF = await cookies();
   const locale = cookiesINF.get("locale")?.value || "fa";
 
@@ -118,33 +120,45 @@ async function DashboardSidebar() {
       <SidebarHeader>
         <div className="flex w-full gap-1.5 py-4">
           <LayoutDashboard />
-          <span>Dashboard</span>
+          <span>{t("title")}</span>
         </div>
       </SidebarHeader>
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Products</SidebarGroupLabel>
+          <SidebarGroupLabel>main</SidebarGroupLabel>
+          <SidebarContent>
+            <SidebarMenu>
+              <Link href={"/dashbord"}>
+                <SidebarMenuButton>
+                  <LayoutDashboard /> {t("title")}
+                </SidebarMenuButton>
+              </Link>
+            </SidebarMenu>
+          </SidebarContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>{t("Product.title")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuButton>
                 <Link href="/products">
                   <ShoppingCart />
-                  <span>All Products</span>
+                  <span>{t("Product.all")}</span>
                 </Link>
               </SidebarMenuButton>
-
-              <SidebarMenuButton>
-                <Link href="/products/new">
-                  <ShoppingCartPlus />
-                  <span>Add Products</span>
-                </Link>
-              </SidebarMenuButton>
-
+              <Link href="/dashbord/InsertProduct">
+                <SidebarMenu>
+                  <SidebarMenuButton>
+                    <ShoppingCartPlus />
+                    <span>{t("Product.insert")}</span>
+                  </SidebarMenuButton>
+                </SidebarMenu>
+              </Link>
               <SidebarMenuButton>
                 <Link href="/products/manage">
                   <ShoppingCart />
-                  <span>Manage Products</span>
+                  <span>{t("Product.Manage")}</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenu>
@@ -152,13 +166,13 @@ async function DashboardSidebar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel>Feedback</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("feedback.title")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuButton>
                 <Link href="/feedback">
                   <MessageCircle />
-                  <span>Manage Feedback</span>
+                  <span>{t("feedback.Manage")}</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenu>
