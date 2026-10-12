@@ -99,7 +99,21 @@
             "qty":"Quantity",
             "alert_qty":"Alert Quantity",
             "brand":"Priduct Brand",
-            "color":"Prodeuct Colors",
+            "color":{
+                "white":"White",
+                "black":"Black",
+                "red":"Red",
+                "purple":"Purple",
+                "grey":"grey",
+                "green":"green",
+                "pink":"pink",
+                "brown":"brown",
+                "blue":"blue",
+                "cyan":"cyan",
+                "orange":"orange",
+                "yellow":"yellow"
+               
+            },
             "size":"Prodeuct Size",
             "man_date":"Man Date",
             "exp_date":"Exp.Date",

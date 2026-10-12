@@ -17,7 +17,7 @@ function InsertProduct() {
         <DashbordHeader />
         <Card className="p-0 m-6">
           <div className="w-full p-4">
-            <p>{t("title")}</p>
+            <p className="mb-4 font-bold">{t("placeholder.title")}</p>
             <InsertProductForm />
           </div>
         </Card>

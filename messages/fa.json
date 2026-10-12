@@ -118,26 +118,40 @@
             "name":"اسم محصول",
             "price":"قیمت محصول",
             "description":"توضیحات محصول",
-            "qty":"Quantity",
-            "alert_qty":"Alert Quantity",
+            "qty":"کیفیت",
+            "alert_qty":"هشدار کیفیت",
             "brand":"برند محصول",
             "color":"رنگ محصول",
-            "size":"سایز محصول"
+            "size":" سایز محصول جدا سازی با ,"
         
         },
         "labels":{
             "name":"اسم محصول",
             "price":"قیمت محصول",
             "description":"توضیحات محصول",
-            "qty":"Quantity",
-            "alert_qty":"Alert Quantity",
+            "qty":"کیفیت",
+            "alert_qty":"هشدار کیفیت",
             "brand":"برند محصول",
-            "color":"رنگ محصول",
+            "color":{
+                "white":"سفید",
+                "black":"سیاه",
+                "red":"سرخ",
+                "purple":"ارغوانی",
+                "grey":"خاکستری",
+                "green":"سبز",
+                "pink":"pink",
+                "brown":"قهوه ای",
+                "blue":"آبی",
+                "cyan":"نیلی",
+                "orange":"نارنجی",
+                "yellow":"زرد"
+               
+            },
             "size":"سایز محصول",
-            "man_date":"Man Date",
-            "exp_date":"Exp.Date",
-            "back_image":"Prodeuct back image",
-            "front_image":"Prodeuct front image"
+            "man_date":"تاریخ تولید",
+            "exp_date":"تاریخ انقضا",
+            "back_image":"عکس محصول",
+            "front_image":"عکس محصول"
         }
      }
     
