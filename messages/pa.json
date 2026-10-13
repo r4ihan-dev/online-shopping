@@ -95,6 +95,7 @@
         "labels":{
             "name":"Priduct name",
             "price":"Prodeuct Price",
+            "type":"Prodeuct type",
             "description":"Product description",
             "qty":"Quantity",
             "alert_qty":"Alert Quantity",
@@ -104,7 +105,7 @@
                 "black":"Black",
                 "red":"Red",
                 "purple":"Purple",
-                "grey":"grey",
+                "gray":"grey",
                 "green":"green",
                 "pink":"pink",
                 "brown":"brown",

@@ -1,11 +1,13 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useLocale, useTranslations } from "next-intl";
-import React from "react";
+import React, { useState } from "react";
 
 function InsertProductForm() {
+  const [moreColor, setMoreColor] = useState(false);
   const t = useTranslations("dashbord.insertProduct");
   const locale = useLocale();
   return (
@@ -47,18 +49,19 @@ function InsertProductForm() {
           placeholder={t("placeholder.size")}
         />
       </div>
-      {/* input size*/}
-      <div className="grid gap-2">
-        <Label htmlFor="size">{t("labels.size")}</Label>
-        <Input
-          type="text"
-          id="size"
-          name="size"
-          placeholder={t("placeholder.size")}
-        />
+      <div>
+        <label htmlFor="">{t("labels.type")}</label>
+        <Select>
+          <Selecttrigger>Select Type</Selecttrigger>
+          <SelectContent>
+            <SelectItem value="cothe">Clothe</SelectItem>
+            <SelectItem value="shoes">Shoes</SelectItem>
+            <SelectItem value="cosmiticItem">Cosmatic Items</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
-      {/* labels colots */}
-      <div className="flex gap-5 items-center">
+      {/* labels colors */}
+      <div className="flex-wrap grid-cols-1 flex gap-5  items-center">
         {/* brown */}
         <div className="flex gap-1 items-center">
           <div className="flex gap-1">
@@ -75,14 +78,7 @@ function InsertProductForm() {
           </div>
           <Checkbox name="color" value="purple" />
         </div>
-        {/* black */}
-        {/* <div className="flex gap-1 items-center">
-          <div className="flex gap-1">
-            <div className="w-4 h-4 bg-black rounded-full"></div>
-            <Label htmlFor="black">{t("labels.color.black")}</Label>
-          </div>
-          <Checkbox name="color" value="black" />
-        </div> */}
+
         {/* green */}
         <div className="flex gap-1 items-center">
           <div className="flex gap-1">
@@ -99,7 +95,73 @@ function InsertProductForm() {
           </div>
           <Checkbox name="color" value="red" />
         </div>
-        <Button>Show more</Button>
+        {/* blue */}
+        <div className={`${moreColor ? "flex" : "hidden"} gap-1 items-center`}>
+          <div className="flex gap-1">
+            <div className="w-4 h-4 bg-blue-600 rounded-full"></div>
+            <Label htmlFor="blue">{t("labels.color.blue")}</Label>
+          </div>
+          <Checkbox name="color" value="blue" />
+        </div>
+        {/* yellow */}
+        <div className={`${moreColor ? "flex" : "hidden"} gap-1 items-center`}>
+          <div className="flex gap-1">
+            <div className="w-4 h-4 bg-yellow-600 rounded-full"></div>
+            <Label htmlFor="yellow">{t("labels.color.yellow")}</Label>
+          </div>
+          <Checkbox name="color" value="yellow" />
+        </div>
+        {/* pink */}
+        <div className={`${moreColor ? "flex" : "hidden"} gap-1 items-center`}>
+          <div className="flex gap-1">
+            <div className="w-4 h-4 bg-pink-600 rounded-full"></div>
+            <Label htmlFor="pink">{t("labels.color.pink")}</Label>
+          </div>
+          <Checkbox name="color" value="pink" />
+        </div>
+        {/* white */}
+        <div className={`${moreColor ? "flex" : "hidden"} gap-1 items-center`}>
+          <div className="flex gap-1">
+            <div className="w-4 h-4 border bg-white rounded-full"></div>
+            <Label htmlFor="white">{t("labels.color.white")}</Label>
+          </div>
+          <Checkbox name="color" value="white" />
+        </div>
+        {/* cyan */}
+        <div className={`${moreColor ? "flex" : "hidden"} gap-1 items-center`}>
+          <div className="flex gap-1">
+            <div className="w-4 h-4 bg-cyan-600 rounded-full"></div>
+            <Label htmlFor="cyan">{t("labels.color.cyan")}</Label>
+          </div>
+          <Checkbox name="color" value="cyan" />
+        </div>
+        {/* gray */}
+        <div className={`${moreColor ? "flex" : "hidden"} gap-1 items-center`}>
+          <div className="flex gap-1">
+            <div className="w-4 h-4 bg-gray-600 rounded-full"></div>
+            <Label htmlFor="gray">{t("labels.color.gray")}</Label>
+          </div>
+          <Checkbox name="color" value="gray" />
+        </div>
+        {/* black */}
+        <div className={`${moreColor ? "flex" : "hidden"}  gap-1 items-center`}>
+          <div className="flex gap-1">
+            <div className="w-4 h-4 bg-black rounded-full"></div>
+            <Label htmlFor="black">{t("labels.color.black")}</Label>
+          </div>
+          <Checkbox name="color" value="black" />
+        </div>
+        {/* orange */}
+        <div className={`${moreColor ? "flex" : "hidden"} gap-1 items-center`}>
+          <div className="flex gap-1">
+            <div className="w-4 h-4 bg-orange-600 rounded-full"></div>
+            <Label htmlFor="orange">{t("labels.color.orange")}</Label>
+          </div>
+          <Checkbox name="color" value="orange" />
+        </div>
+        <Button onClick={() => setMoreColor(!moreColor)}>
+          {moreColor ? "نمایش کمتر" : "نمایش بیشتر"}
+        </Button>
       </div>
     </form>
   );
