@@ -1,19 +1,26 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
+import { Calendar1Icon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 function InsertProductForm() {
-  const [typeProduct, setTypeProduct] = useState();
+  const [typeProduct, setTypeProduct] = useState("");
   const [moreColor, setMoreColor] = useState(false);
   const t = useTranslations("dashbord.insertProduct");
   const locale = useLocale();
@@ -58,7 +65,7 @@ function InsertProductForm() {
       </div>
       <div>
         <label htmlFor="">{t("labels.type")}</label>
-        <Select value={typeProduct} onValueChange={() => setTypeProduct}>
+        <Select value={typeProduct} onValueChange={setTypeProduct}>
           <SelectTrigger className="w-full">Select Type</SelectTrigger>
           <SelectContent>
             <SelectItem value="clothe">Clothe</SelectItem>
@@ -72,6 +79,14 @@ function InsertProductForm() {
         className={`${typeProduct == "cosmiticItem" ? "block" : "hidden"} w-full `}
       >
         <Label>{t("labels.man_date")}</Label>
+        <Popover>
+          <PopoverTrigger>
+            <Calendar1Icon />
+          </PopoverTrigger>
+          <PopoverContent>
+            <Calendar dir="rtl" />
+          </PopoverContent>
+        </Popover>
       </div>
       {/* exp_date */}
       <div
