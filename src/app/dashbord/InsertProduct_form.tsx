@@ -3,10 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+} from "@/components/ui/select";
 import { useLocale, useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 function InsertProductForm() {
+  const [typeProduct, setTypeProduct] = useState();
   const [moreColor, setMoreColor] = useState(false);
   const t = useTranslations("dashbord.insertProduct");
   const locale = useLocale();
@@ -51,15 +58,33 @@ function InsertProductForm() {
       </div>
       <div>
         <label htmlFor="">{t("labels.type")}</label>
-        <Select>
-          <Selecttrigger>Select Type</Selecttrigger>
+        <Select value={typeProduct} onValueChange={() => setTypeProduct}>
+          <SelectTrigger className="w-full">Select Type</SelectTrigger>
           <SelectContent>
-            <SelectItem value="cothe">Clothe</SelectItem>
+            <SelectItem value="clothe">Clothe</SelectItem>
             <SelectItem value="shoes">Shoes</SelectItem>
             <SelectItem value="cosmiticItem">Cosmatic Items</SelectItem>
           </SelectContent>
         </Select>
       </div>
+      {/* man_date */}
+      <div
+        className={`${typeProduct == "cosmiticItem" ? "block" : "hidden"} w-full `}
+      >
+        <Label>{t("labels.man_date")}</Label>
+      </div>
+      {/* exp_date */}
+      <div
+        className={`${typeProduct == "cosmiticItem" ? "block" : "hidden"} w-full `}
+      >
+        <Label>{t("labels.exp_date")}</Label>
+      </div>
+      {/* <div
+        className={`${typeProduct == "cosmaticItem" ? "block" : "hidden"}w-full`}
+      >
+        <Label>{t("labels.exp_date")}</Label>
+      </div> */}
+
       {/* labels colors */}
       <div className="flex-wrap grid-cols-1 flex gap-5  items-center">
         {/* brown */}
