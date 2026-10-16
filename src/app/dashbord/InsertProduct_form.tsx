@@ -1,25 +1,24 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import {} from "@/components/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
-import { Calendar1Icon } from "lucide-react";
+
 import { useLocale, useTranslations } from "next-intl";
 import React, { useState } from "react";
+import JalaliDatePicker from "./jalali-date-picker";
+import EndDateShamsi from "./exp-Date-Jalali";
 
 function InsertProductForm() {
+  const [ManDate, setManDate] = useState<Date>();
   const [typeProduct, setTypeProduct] = useState("");
   const [moreColor, setMoreColor] = useState(false);
   const t = useTranslations("dashbord.insertProduct");
@@ -63,42 +62,83 @@ function InsertProductForm() {
           placeholder={t("placeholder.size")}
         />
       </div>
+      {/* input qty */}
+      <div className="grid gap-2">
+        <Label htmlFor="qty">{t("labels.qty")}</Label>
+        <Input
+          type="number"
+          id="qty"
+          name="qty"
+          placeholder={t("placeholder.qty")}
+        />
+      </div>
+      {/* alert_qty */}
+      <div className="grid gap-2">
+        <Label htmlFor="alert_qty">{t("labels.alert_qty")}</Label>
+        <Input
+          type="number"
+          id="alert_qty"
+          name="alert_qty"
+          placeholder={t("placeholder.alert_qty")}
+        />
+      </div>
+      {/* input brand */}
+      <div className="grid gap-2">
+        <Label htmlFor="brand">{t("labels.brand")}</Label>
+        <Input
+          type="text"
+          id="brand"
+          name="brand"
+          placeholder={t("placeholder.brand")}
+        />
+      </div>
+      {/* fron image */}
+      <div className="grid gap-2">
+        <Label htmlFor="front_image">{t("labels.front_image")}</Label>
+        <Input
+          type="file"
+          accept="image/*"
+          id="front_image"
+          name="front_image"
+        />
+      </div>
+      {/* back image */}
+      <div className="grid gap-2">
+        <Label htmlFor="back_image">{t("labels.back_image")}</Label>
+        <Input type="file" accept="image/*" id="back_image" name="back_image" />
+      </div>
+      {/* input type */}
       <div>
         <label htmlFor="">{t("labels.type")}</label>
         <Select value={typeProduct} onValueChange={setTypeProduct}>
           <SelectTrigger className="w-full">Select Type</SelectTrigger>
           <SelectContent>
-            <SelectItem value="clothe">Clothe</SelectItem>
-            <SelectItem value="shoes">Shoes</SelectItem>
-            <SelectItem value="cosmiticItem">Cosmatic Items</SelectItem>
+            <SelectItem value="clothe">
+              {t("labels.product_type.cloth")}
+            </SelectItem>
+            <SelectItem value="shoes">
+              {t("labels.product_type.shoes")}
+            </SelectItem>
+            <SelectItem value="cosmiticItem">
+              {t("labels.product_type.cosmatic_Items")}
+            </SelectItem>
           </SelectContent>
         </Select>
       </div>
       {/* man_date */}
       <div
-        className={`${typeProduct == "cosmiticItem" ? "block" : "hidden"} w-full `}
+        className={`${typeProduct == "cosmiticItem" ? "blovk" : "hidden"} w-full`}
       >
         <Label>{t("labels.man_date")}</Label>
-        <Popover>
-          <PopoverTrigger>
-            <Calendar1Icon />
-          </PopoverTrigger>
-          <PopoverContent>
-            <Calendar dir="rtl" />
-          </PopoverContent>
-        </Popover>
+        <JalaliDatePicker manDate={ManDate} setManDate={setManDate} />
       </div>
       {/* exp_date */}
       <div
         className={`${typeProduct == "cosmiticItem" ? "block" : "hidden"} w-full `}
       >
         <Label>{t("labels.exp_date")}</Label>
+        <EndDateShamsi manDate={ManDate} setManDate={setManDate} />
       </div>
-      {/* <div
-        className={`${typeProduct == "cosmaticItem" ? "block" : "hidden"}w-full`}
-      >
-        <Label>{t("labels.exp_date")}</Label>
-      </div> */}
 
       {/* labels colors */}
       <div className="flex-wrap grid-cols-1 flex gap-5  items-center">
@@ -203,6 +243,14 @@ function InsertProductForm() {
           {moreColor ? "نمایش کمتر" : "نمایش بیشتر"}
         </Button>
       </div>
+      <div className="grid gap-2">
+        <Label htmlFor="description">{t("labels.description")}</Label>
+        <Textarea
+          className="w-full h-28 resize-none"
+          placeholder={t("placeholder.description")}
+        />
+      </div>
+      <Button>{t("labels.save_btn ")}</Button>
     </form>
   );
 }

@@ -148,11 +148,17 @@
                 "yellow":"زرد"
                
             },
+            "product_type":{
+            "cloth":"لباس",
+            "shoes":"کفش",
+            "cosmatic_Items":"وسایل آرایشی" 
+            },
             "size":"سایز محصول",
             "man_date":"تاریخ تولید",
             "exp_date":"تاریخ انقضا",
             "back_image":"عکس محصول",
-            "front_image":"عکس محصول"
+            "front_image":"عکس محصول",
+            "save_btn":" کردن ذخیره"
         }
      }
     

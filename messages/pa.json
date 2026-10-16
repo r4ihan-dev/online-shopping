@@ -115,11 +115,17 @@
                 "yellow":"yellow"
                
             },
+            "product_type":{
+            "cloth":"Clothes",
+            "shoes":"Shoes",
+            "cosmatic_Items":"Cosmetic Items"
+            },
             "size":"Prodeuct Size",
             "man_date":"Man Date",
             "exp_date":"Exp.Date",
             "back_image":"Prodeuct back image",
-            "front_image":"Prodeuct front image"
+            "front_image":"Prodeuct front image",
+            "save_btn":"Save"
         }
      }
     
